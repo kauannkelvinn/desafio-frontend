@@ -45,7 +45,7 @@ export default function LoginPage() {
                         required
                     />
                 </div>
-                <button type='submit' className='w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600'>
+                <button type='submit' className='w-full cursor-pointer bg-colmeia-yellow text-colmeia-blue font-semibold py-2 rounded-md hover:opacity-90'>
                     Entrar
                 </button>
             </form>

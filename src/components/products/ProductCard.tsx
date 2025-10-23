@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="text-xl font-bold">R$ {product.price.toFixed(2)}</p>
         <button
             onClick={handleAddToCart}
-            className="cursor-pointer mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+            className="cursor-pointer mt-4 bg-colmeia-yellow text-colmeia-blue font-semibold px-4 py-2 rounded hover:opacity-90">
             Adicionar ao Carrinho
         </button>
     </div>

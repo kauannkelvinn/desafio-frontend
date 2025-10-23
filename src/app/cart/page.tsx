@@ -34,7 +34,7 @@ export default function CartPage() {
 
                         <div className='flex justify-end mt-6'>
                             <Link href="/checkout">
-                                <button className='bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600'>
+                                <button className='cursor-pointer bg-colmeia-yellow text-colmeia-blue font-semibold px-6 py-2 rounded-lg hover:opacity-90'>
                                     Ir para o Chekout
                                 </button>
                             </Link>

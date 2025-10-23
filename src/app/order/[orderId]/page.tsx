@@ -18,7 +18,7 @@ export default function OrderStatusPage() {
                 <p className="mb-2">Seu pedido <span className="font-mono">#{orderId}</span> foi confirmado com sucesso.</p>
                 <p className="mb-8">Obrigado por comprar conosco!</p>
                 <Link href="/">
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
+                    <button className="cursor-pointer bg-colmeia-yellow text-colmeia-blue font-semibold px-6 py-2 rounded-lg hover:opacity-90">
                         Voltar para a loja
                     </button>
                 </Link>
@@ -32,7 +32,7 @@ export default function OrderStatusPage() {
                 <h1 className="text-3xl font-bold">Pagamento Recusado</h1>
                 <p className="mb-8">Houve um problema ao processar seu pagamento. Por favor, tente novamente.</p>
                 <Link href="/checkout">
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
+                    <button className="cursor-pointer bg-colmeia-yellow text-colmeia-blue font-semibold px-6 py-2 rounded-lg hover:opacity-90">
                         Tentar Novamente
                     </button>
                 </Link>

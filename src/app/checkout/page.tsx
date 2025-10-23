@@ -129,7 +129,7 @@ export default function CheckoutPage() {
             <div className="mt-10">
                 <Button 
                 size="lg" 
-                className="w-full max-w-md"
+                className="w-full max-w-md cursor-pointer bg-colmeia-yellow text-colmeia-blue font-semibold hover:bg-amber-300"
                 onClick={handlePaymentSubmit}
                 disabled={isLoading}>
                     {isLoading ? 'Processando...' : 'Finalizar Compra'}

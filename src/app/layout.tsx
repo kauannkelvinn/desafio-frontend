@@ -1,12 +1,15 @@
 
+import { Sora } from "next/font/google";
 import { Header } from "@/src/components/layout/Header"
 import { AuthProvider } from "@/src/contexts/AuthContext";
 import { CartProvider } from "@/src/contexts/CartContext";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const sora = Sora({ 
+  subsets: ['latin'],
+  weight: ['400', '600', '700']
+});
 
 export const metadata: Metadata = {
   title: "Colmeia.io Challenge",
@@ -20,9 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-      >
+      <body className={sora.className}>
         <AuthProvider>
           <CartProvider>
             <Header />
