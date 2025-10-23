@@ -1,5 +1,6 @@
 
 import { Header } from "@/src/components/layout/Header"
+import { AuthProvider } from "@/src/contexts/AuthContext";
 import { CartProvider } from "@/src/contexts/CartContext";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-        <CartProvider>
-          <Header />
-          <main className="container mx-auto p-4">{children}</main>
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <Header />
+            <main className="container mx-auto p-4">{children}</main>
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

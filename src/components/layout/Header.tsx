@@ -1,6 +1,9 @@
 'use client';
 
+
+
 import { useCart } from '@/src/contexts/CartContext';
+import Link from 'next/link';
 
 export function Header() {
     const { items } = useCart();
@@ -10,9 +13,16 @@ export function Header() {
     return (
         <header className="bg-zinc-900 text-white p-4">
             <div className="container mx-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">Colmeia Store</h1>
+                <Link href="/">
+                    <h1 className="text-xl font-bold">Colmeia Store</h1>
+                </Link>
+
+
+                
                 <nav>
-                    <span>Carrinho ({totalItems})</span>
+                    <Link href="/cart">
+                        <span>Carrinho ({totalItems})</span>
+                    </Link>
                 </nav>
             </div>
         </header>
