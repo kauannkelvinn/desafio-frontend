@@ -16,7 +16,7 @@
 
 Um rápido tour pelo fluxo completo da aplicação, desde a seleção de produtos até a finalização do pagamento com validação em tempo real.
 
-![Demonstração do Projeto](./colmeia.io.gif)
+![Demonstração do Projeto]([./colmeia.io.gif](https://github.com/user-attachments/assets/1d538780-f5b8-44b5-9584-def09b6180a4))
 
 ---
 
