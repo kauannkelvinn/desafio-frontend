@@ -76,9 +76,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --colmeia-blue: 233 100% 20%; /* Este é o HSL para a cor #002366 */
-  --colmeia-yellow: 51 100% 50%; /* HSL para #FFD700 */
-  --colmeia-text-blue: 233 100% 20%; /* Mesma cor do header, para o texto */
+  --colmeia-blue: 233 100% 20%;
+  --colmeia-yellow: 51 100% 50%;
+  --colmeia-text-blue: 233 100% 20%;
 }
 
 .dark {

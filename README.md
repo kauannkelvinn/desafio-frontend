@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Desafio Frontend - Fluxo de Checkout | Colmeia.io
 
-## Getting Started
+![Status: Concluído](https://img.shields.io/badge/status-concluído-brightgreen)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-First, run the development server:
+> Projeto desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Frontend na Colmeia.io.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🔗 Link para o Deploy
+**Acesse a aplicação em produção:** [https://colmeiachallenge.vercel.app/](https://colmeiachallenge.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Demonstração em Vídeo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Um rápido tour pelo fluxo completo da aplicação, desde a seleção de produtos até a finalização do pagamento com validação em tempo real.
 
-## Learn More
+`![Demonstração do Projeto](https://github.com/kauannkelvinn/desafio-frontend/blob/main/colmeiaio.gif)`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sobre o Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este projeto consiste na construção de uma interface de e-commerce **100% mockada** (sem backend real), focada na experiência do usuário durante o fluxo de checkout. A aplicação foi desenvolvida seguindo os requisitos propostos, com atenção especial à qualidade do código, componentização, responsividade e fidelidade na simulação dos processos de pagamento.
 
-## Deploy on Vercel
+A identidade visual foi inspirada na própria **Colmeia.io**, utilizando sua paleta de cores e logo para demonstrar atenção aos detalhes e senso de produto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✅ Funcionalidades Implementadas
+
+### Funcionalidades Essenciais
+- **Catálogo de Produtos:** Listagem de produtos com informações básicas.
+- **Gerenciamento de Carrinho:**
+  - Adição de itens ao carrinho.
+  - Ajuste de quantidade (aumentar/diminuir) e remoção de itens.
+  - O estado do carrinho é global e atualizado em tempo real no Header, na página do carrinho e no resumo do pedido.
+- **Autenticação Mockada:** Simulação de login/cadastro com persistência de sessão no `localStorage` do navegador.
+- **Rotas Protegidas:** Acesso à página de checkout restrito a usuários autenticados.
+- **Fluxo de Pagamento Completo:**
+  - Seleção de método de pagamento (Cartão de Crédito, Pix, Boleto) usando abas.
+  - Geração dinâmica de um **QR Code** para a simulação de pagamento via Pix.
+  - Simulação de processamento com feedback de sucesso ou falha aleatória.
+  - Redirecionamento para página de status do pedido.
+
+### Refinamentos de UI/UX
+- **Design Responsivo:** Layout adaptável para desktop e mobile, com um grid inteligente na página de checkout.
+- **Validação de Formulário Avançada:**
+  - Validação em tempo real (`onBlur`) e na submissão (`onSubmit`) para o formulário de cartão de crédito.
+  - Mensagens de erro claras e em português.
+  - Implementado com `React Hook Form` e `Zod`.
+- **Máscaras de Input:** Formatação automática para os campos de Número do Cartão, Validade e CVV, melhorando a usabilidade.
+- **Componentes de UI "Apple-like":** Inputs com o efeito de *floating label* para uma interface mais limpa e moderna.
+- **Redirecionamento Inteligente:** Se o carrinho for esvaziado na página de checkout, o usuário é automaticamente redirecionado para a página de carrinho vazio.
+
+---
+
+## Tecnologias Utilizadas
+
+O projeto foi construído com uma stack moderna, focada em performance e na melhor experiência de desenvolvimento:
+
+- **React**
+- **Next.js 13+ (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Shadcn UI** para a base de componentes (Abas, Inputs, Botões).
+- **React Hook Form** para gerenciamento de formulários.
+- **Zod** para validação de schemas.
+- **`@react-input/mask`** para a formatação de inputs.
+- **`qrcode.react`** para a geração de QR Codes.
+- **Context API** para gerenciamento de estado global (Carrinho e Autenticação).
+
+---
+
+## Rodando o Projeto Localmente
+
+Siga os passos abaixo para executar o projeto em sua máquina.
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/kauannkelvinn/desafio-frontend](https://github.com/kauannkelvinn/desafio-frontend)
+    ```
+
+2.  **Acesse o diretório do projeto:**
+    ```bash
+    cd desafio-frontend
+    ```
+
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+4.  **Execute a aplicação em modo de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+5.  Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+---
+
+## Autor
+
+**Kauan Kelvin**
+
+- [LinkedIn](https://www.linkedin.com/in/kauannkelvinn/)
+- [GitHub](https://github.com/kauannkelvinn)
