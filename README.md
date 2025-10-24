@@ -16,7 +16,7 @@
 
 Um rápido tour pelo fluxo completo da aplicação, desde a seleção de produtos até a finalização do pagamento com validação em tempo real.
 
-![Demonstração do Projeto](https://imgur.com/a/uCTFyNU](https://imgur.com/HnbF23c)
+![Demonstração do Projeto](https://i.imgur.com/HnbF23c.gif)
 
 ---
 
